@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.venv/
+skills/*/frames/
+skills/*/skill.mp4
+skills/*/orbit.mp4
+skills/*/audio.m4a
+.DS_Store
+
+# secrets and local state
+.env
+.env.*
+!.env.example
+.upload-tmp/
+*.log
+.vite/
+.vercel/
+skills/*/audio.wav
+skills/*/transcript.raw.json
