@@ -1,0 +1,37 @@
+[
+ {
+  "start": 10.2,
+  "end": 16.8,
+  "text": "Make sure battery don disconnect before you touch anything",
+  "lang": "pcm-en",
+  "is_warning": false
+ },
+ {
+  "start": 38.5,
+  "end": 44.5,
+  "text": "No use 13, e go spoil am",
+  "lang": "pcm",
+  "is_warning": false
+ },
+ {
+  "start": 45.0,
+  "end": 58.0,
+  "text": "Loosen alternator bolt with 14 spanner, turn am counter-clockwise",
+  "lang": "pcm-en",
+  "is_warning": false
+ },
+ {
+  "start": 92.0,
+  "end": 99.5,
+  "text": "Careful, engine still hot, make you no burn hand",
+  "lang": "pcm-en",
+  "is_warning": true
+ },
+ {
+  "start": 118.0,
+  "end": 126.0,
+  "text": "Tighten everything back, then test run am small",
+  "lang": "pcm-en",
+  "is_warning": false
+ }
+]

@@ -1,0 +1,16 @@
+{
+ "skills": [
+  {
+   "id": "test_tailor_001",
+   "title": "Test tailor skill"
+  },
+  {
+   "id": "gen_ladipo_001",
+   "title": "Generator alternator bolt service"
+  },
+  {
+   "id": "blender_assembly_001",
+   "title": "Assembling a Golden Crown blender"
+  }
+ ]
+}

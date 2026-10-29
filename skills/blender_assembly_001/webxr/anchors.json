@@ -1,0 +1,52 @@
+[
+ {
+  "step_id": 1,
+  "xr_anchor": "obj_30",
+  "position_m": [
+   0.0,
+   0.25,
+   0.0
+  ],
+  "voice_prompt": "Red blender base sits on counter with power cord unplugged a"
+ },
+ {
+  "step_id": 2,
+  "xr_anchor": "obj_20",
+  "position_m": [
+   0.193,
+   0.3,
+   -0.001
+  ],
+  "voice_prompt": "Clear empty blender jar sits on counter next to stove and ba"
+ },
+ {
+  "step_id": 3,
+  "xr_anchor": "obj_10",
+  "position_m": [
+   -0.144,
+   0.3,
+   -0.14
+  ],
+  "voice_prompt": "Hand picks up black lid and holds it over the blender base."
+ },
+ {
+  "step_id": 4,
+  "xr_anchor": "obj_10",
+  "position_m": [
+   0.048,
+   0.3,
+   0.004
+  ],
+  "voice_prompt": "Hand holds up clear jar then sets black lid onto the jar."
+ },
+ {
+  "step_id": 5,
+  "xr_anchor": "obj_20",
+  "position_m": [
+   0.008,
+   0.3,
+   -0.099
+  ],
+  "voice_prompt": "Hand lowers lidded jar onto red base leaving blender fully a"
+ }
+]

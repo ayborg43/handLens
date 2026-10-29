@@ -1,0 +1,49 @@
+{
+ "bolt": {
+  "name": "bolt",
+  "blurb": "Spotted in 5 frames (not tied to a step yet).",
+  "frames": 5,
+  "avg_score": 0.94,
+  "steps": [],
+  "source": "template"
+ },
+ "engine block": {
+  "name": "engine block",
+  "blurb": "Spotted in 5 frames (used in steps [1, 2, 4, 5]).",
+  "frames": 5,
+  "avg_score": 0.96,
+  "steps": [
+   1,
+   2,
+   4,
+   5
+  ],
+  "source": "template"
+ },
+ "hand": {
+  "name": "hand",
+  "blurb": "Spotted in 5 frames (not tied to a step yet).",
+  "frames": 5,
+  "avg_score": 0.93,
+  "steps": [],
+  "source": "template"
+ },
+ "screwdriver": {
+  "name": "screwdriver",
+  "blurb": "Spotted in 5 frames (not tied to a step yet).",
+  "frames": 5,
+  "avg_score": 0.89,
+  "steps": [],
+  "source": "template"
+ },
+ "spanner": {
+  "name": "spanner",
+  "blurb": "Spotted in 5 frames (used in step [3]).",
+  "frames": 5,
+  "avg_score": 0.91,
+  "steps": [
+   3
+  ],
+  "source": "template"
+ }
+}

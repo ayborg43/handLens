@@ -1,0 +1,13 @@
+{
+ "title": "Test tailor skill",
+ "prompts": [
+  "hand",
+  "needle",
+  "fabric",
+  "scissors"
+ ],
+ "warnings": [
+  "careful",
+  "sharp"
+ ]
+}

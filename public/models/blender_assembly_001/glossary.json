@@ -1,0 +1,50 @@
+{
+ "blender base": {
+  "name": "blender base",
+  "blurb": "Spotted in 12 frames (used in step [1]).",
+  "frames": 12,
+  "avg_score": 0.71,
+  "steps": [
+   1
+  ],
+  "source": "template"
+ },
+ "blender jar": {
+  "name": "blender jar",
+  "blurb": "Spotted in 12 frames (used in steps [2, 5]).",
+  "frames": 12,
+  "avg_score": 0.67,
+  "steps": [
+   2,
+   5
+  ],
+  "source": "template"
+ },
+ "hand": {
+  "name": "hand",
+  "blurb": "Spotted in 16 frames (not tied to a step yet).",
+  "frames": 16,
+  "avg_score": 0.85,
+  "steps": [],
+  "source": "template"
+ },
+ "lid": {
+  "name": "lid",
+  "blurb": "Spotted in 38 frames (used in steps [3, 4]).",
+  "frames": 38,
+  "avg_score": 0.78,
+  "steps": [
+   3,
+   4
+  ],
+  "source": "template"
+ },
+ "power cord": {
+  "name": "power cord",
+  "blurb": "Spotted in 57 frames (not tied to a step yet).",
+  "frames": 57,
+  "avg_score": 0.71,
+  "steps": [],
+  "source": "template"
+ }
+}

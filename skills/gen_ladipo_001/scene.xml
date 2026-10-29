@@ -1,0 +1,13 @@
+<mujoco>
+  <!-- P1 sim stub: MuJoCo viewer loads workshop.urdf alongside a robot arm.
+       Record the viewer playing this scene for the demo clip. -->
+  <compiler angle="radian" meshdir="."/>
+  <worldbody>
+    <light name="top" pos="0 0 2"/>
+    <geom name="floor" type="plane" size="1 1 0.1"/>
+    <body name="workshop" pos="0 0 0">
+      <freejoint/>
+      <!-- attach workshop.urdf bodies here for the sim recording -->
+    </body>
+  </worldbody>
+</mujoco>

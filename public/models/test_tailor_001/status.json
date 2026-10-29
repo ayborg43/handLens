@@ -1,0 +1,9 @@
+{
+ "model": "placeholder",
+ "clips": "placeholder",
+ "masks": "sample",
+ "transcript": "sample",
+ "reasoning": "offline",
+ "robot": "stub",
+ "vr": "stub"
+}

@@ -1,0 +1,137 @@
+{
+ "top_logprobs": 0,
+ "temperature": 1.0,
+ "top_p": 1.0,
+ "service_tier": "auto",
+ "model": "muse-spark-1.3",
+ "reasoning": {
+  "effort": "high"
+ },
+ "background": false,
+ "text": {
+  "format": {
+   "type": "json_schema",
+   "name": "skill_steps",
+   "schema": {
+    "required": [
+     "steps"
+    ],
+    "type": "object",
+    "properties": {
+     "steps": {
+      "items": {
+       "additionalProperties": false,
+       "properties": {
+        "action": {
+         "description": "title, at most 6 words",
+         "type": "string"
+        },
+        "action_type": {
+         "enum": [
+          "inspect",
+          "pick",
+          "place",
+          "press",
+          "twist",
+          "pour",
+          "cut",
+          "stitch",
+          "spray",
+          "torque"
+         ],
+         "type": "string"
+        },
+        "end": {
+         "description": "step end, seconds",
+         "type": "number"
+        },
+        "instruction": {
+         "description": "one sentence describing the action shown",
+         "type": "string"
+        },
+        "object": {
+         "enum": [
+          "hand",
+          "lid",
+          "blender jar",
+          "blender base",
+          "power cord"
+         ],
+         "type": "string"
+        },
+        "start": {
+         "description": "step start, seconds",
+         "type": "number"
+        },
+        "warning": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "start",
+        "end",
+        "action",
+        "instruction",
+        "object",
+        "action_type",
+        "warning"
+       ],
+       "type": "object"
+      },
+      "maxItems": 5,
+      "minItems": 5,
+      "type": "array"
+     }
+    },
+    "additionalProperties": false
+   },
+   "strict": false
+  }
+ },
+ "tools": [],
+ "tool_choice": "auto",
+ "truncation": "disabled",
+ "id": "resp_6ae1972f64753503a0c44e64",
+ "object": "response",
+ "status": "completed",
+ "created_at": 1793169199.0,
+ "completed_at": 1793169199.0,
+ "error": null,
+ "incomplete_details": null,
+ "output": [
+  {
+   "type": "reasoning",
+   "id": "rs_6ae1972f64753503a0c44e64:rs_fed0bcd6-c5ee-4dca-b384-a526b1c570b4",
+   "summary": [],
+   "status": "completed"
+  },
+  {
+   "type": "message",
+   "id": "msg_e7dd7341-d4be-440f-a653-136080a1d624",
+   "role": "assistant",
+   "content": [
+    {
+     "type": "output_text",
+     "text": "{\"steps\": [{\"action\": \"Inspect blender base setup\", \"action_type\": \"inspect\", \"end\": 15.0, \"instruction\": \"Red blender base sits on counter with power cord unplugged and black lid beside it.\", \"object\": \"blender base\", \"start\": 0.0, \"warning\": \"\"}, {\"action\": \"Inspect empty blender jar\", \"action_type\": \"inspect\", \"end\": 30.0, \"instruction\": \"Clear empty blender jar sits on counter next to stove and base.\", \"object\": \"blender jar\", \"start\": 15.0, \"warning\": \"\"}, {\"action\": \"Pick up black lid\", \"action_type\": \"pick\", \"end\": 44.0, \"instruction\": \"Hand picks up black lid and holds it over the blender base.\", \"object\": \"lid\", \"start\": 30.0, \"warning\": \"\"}, {\"action\": \"Place lid on jar\", \"action_type\": \"place\", \"end\": 59.0, \"instruction\": \"Hand holds up clear jar then sets black lid onto the jar.\", \"object\": \"lid\", \"start\": 44.0, \"warning\": \"\"}, {\"action\": \"Place jar on base\", \"action_type\": \"place\", \"end\": 74.0, \"instruction\": \"Hand lowers lidded jar onto red base leaving blender fully assembled.\", \"object\": \"blender jar\", \"start\": 59.0, \"warning\": \"\"}]}",
+     "annotations": [],
+     "logprobs": []
+    }
+   ],
+   "status": "completed"
+  }
+ ],
+ "instructions": null,
+ "usage": {
+  "input_tokens": 8434,
+  "input_tokens_details": {
+   "cached_tokens": 0
+  },
+  "output_tokens": 1806,
+  "output_tokens_details": {
+   "reasoning_tokens": 1482
+  },
+  "total_tokens": 10240
+ },
+ "parallel_tool_calls": true,
+ "store": true
+}

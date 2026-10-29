@@ -1,0 +1,17 @@
+{
+ "title": "Assembling a Golden Crown blender",
+ "prompts": [
+  "hand",
+  "lid",
+  "blender jar",
+  "blender base",
+  "power cord"
+ ],
+ "warnings": [
+  "careful",
+  "hot",
+  "unplug",
+  "blade",
+  "sharp"
+ ]
+}

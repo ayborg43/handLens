@@ -1,0 +1,256 @@
+{
+ "project_id": "test_tailor_001",
+ "skill_title": "Test tailor skill",
+ "capture_device": "SM-S911B",
+ "language_pack": [
+  "pcm",
+  "pcm-en"
+ ],
+ "world_scale": "meters, table at y=0, subject ~0.5m wide",
+ "steps": [
+  {
+   "step_id": 1,
+   "timestamp": "00:10-00:16",
+   "action": "Make sure battery don disconnect before you touch anything",
+   "tool": "hand tool",
+   "tool_object_id": "tool_01",
+   "target_object_id": "obj_00",
+   "human": {
+    "instruction": "Make sure battery don disconnect before you touch anything",
+    "warning": "",
+    "transcript_local": "Make sure battery don disconnect before you touch anything",
+    "transcript_pidgin": "Make sure battery don disconnect before you touch anything",
+    "video_clip": "clips/clip_0010.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_00",
+    "position_m": [
+     -0.003,
+     0.3,
+     0.005
+    ],
+    "model_ref": "model.glb#obj_00"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand_tool",
+    "target_pose": {
+     "x": -0.003,
+     "y": 0.3,
+     "z": 0.005,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 6,
+    "urdf_trajectory": "traj_step01.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_00",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Make sure battery don disconnect before you touch anything",
+    "hand_ghost": "ghost_hand_step01.glb"
+   }
+  },
+  {
+   "step_id": 2,
+   "timestamp": "00:38-00:44",
+   "action": "No use 13, e go spoil am",
+   "tool": "hand tool",
+   "tool_object_id": "tool_02",
+   "target_object_id": "obj_00",
+   "human": {
+    "instruction": "No use 13, e go spoil am",
+    "warning": "",
+    "transcript_local": "No use 13, e go spoil am",
+    "transcript_pidgin": "No use 13, e go spoil am",
+    "video_clip": "clips/clip_0038.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_00",
+    "position_m": [
+     -0.003,
+     0.3,
+     0.005
+    ],
+    "model_ref": "model.glb#obj_00"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand_tool",
+    "target_pose": {
+     "x": -0.003,
+     "y": 0.3,
+     "z": 0.005,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 6,
+    "urdf_trajectory": "traj_step02.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_00",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "No use 13, e go spoil am",
+    "hand_ghost": "ghost_hand_step02.glb"
+   }
+  },
+  {
+   "step_id": 3,
+   "timestamp": "00:45-00:58",
+   "action": "Loosen alternator bolt with 14 spanner, turn am counter-clockwise",
+   "tool": "14mm spanner",
+   "tool_object_id": "tool_03",
+   "target_object_id": "obj_02",
+   "human": {
+    "instruction": "Loosen alternator bolt with 14 spanner, turn am counter-clockwise",
+    "warning": "",
+    "transcript_local": "Loosen alternator bolt with 14 spanner, turn am counter-clockwise",
+    "transcript_pidgin": "Loosen alternator bolt with 14 spanner, turn am counter-clockwise",
+    "video_clip": "clips/clip_0045.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_02",
+    "position_m": [
+     -0.135,
+     0.3,
+     -0.116
+    ],
+    "model_ref": "model.glb#obj_02"
+   },
+   "robot": {
+    "action_type": "torque",
+    "tool_tcp": "14mm_spanner",
+    "target_pose": {
+     "x": -0.135,
+     "y": 0.3,
+     "z": -0.116,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 13,
+    "urdf_trajectory": "traj_step03.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true,
+    "torque_nm": 8.5,
+    "direction": "ccw"
+   },
+   "vr": {
+    "xr_anchor": "obj_02",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Loosen alternator bolt with 14 spanner, turn am counter-cloc",
+    "hand_ghost": "ghost_hand_step03.glb"
+   }
+  },
+  {
+   "step_id": 4,
+   "timestamp": "01:32-01:39",
+   "action": "Careful, engine still hot, make you no burn hand",
+   "tool": "hand tool",
+   "tool_object_id": "tool_04",
+   "target_object_id": "obj_00",
+   "human": {
+    "instruction": "Careful, engine still hot, make you no burn hand",
+    "warning": "workshop hazard nearby",
+    "transcript_local": "Careful, engine still hot, make you no burn hand",
+    "transcript_pidgin": "Careful, engine still hot, make you no burn hand",
+    "video_clip": "clips/clip_0092.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_00",
+    "position_m": [
+     -0.003,
+     0.3,
+     0.005
+    ],
+    "model_ref": "model.glb#obj_00"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand_tool",
+    "target_pose": {
+     "x": -0.003,
+     "y": 0.3,
+     "z": 0.005,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 7,
+    "urdf_trajectory": "traj_step04.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_00",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Careful, engine still hot, make you no burn hand",
+    "hand_ghost": "ghost_hand_step04.glb"
+   }
+  },
+  {
+   "step_id": 5,
+   "timestamp": "01:58-02:06",
+   "action": "Tighten everything back, then test run am small",
+   "tool": "hand tool",
+   "tool_object_id": "tool_05",
+   "target_object_id": "obj_00",
+   "human": {
+    "instruction": "Tighten everything back, then test run am small",
+    "warning": "",
+    "transcript_local": "Tighten everything back, then test run am small",
+    "transcript_pidgin": "Tighten everything back, then test run am small",
+    "video_clip": "clips/clip_0118.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_00",
+    "position_m": [
+     -0.003,
+     0.3,
+     0.005
+    ],
+    "model_ref": "model.glb#obj_00"
+   },
+   "robot": {
+    "action_type": "torque",
+    "tool_tcp": "hand_tool",
+    "target_pose": {
+     "x": -0.003,
+     "y": 0.3,
+     "z": 0.005,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 8,
+    "urdf_trajectory": "traj_step05.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true,
+    "torque_nm": 8.5,
+    "direction": "cw"
+   },
+   "vr": {
+    "xr_anchor": "obj_00",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Tighten everything back, then test run am small",
+    "hand_ghost": "ghost_hand_step05.glb"
+   }
+  }
+ ]
+}

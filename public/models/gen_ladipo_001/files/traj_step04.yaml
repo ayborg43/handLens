@@ -1,0 +1,17 @@
+joint_names: [joint1, joint2, joint3, joint4, joint5, joint6]
+sim_stub: true
+points:
+  - positions: [0.000, 0.000, 0.000, 0.000, 0.000, 0.000]
+    time_from_start: 0
+  - positions: [0.200, 0.200, 0.000, 0.000, 0.000, 0.000]
+    time_from_start: 2
+  - positions: [0.200, 0.200, 0.200, 0.000, 0.000, 0.000]
+    time_from_start: 5
+metadata:
+  action_type: "place"
+  tool_tcp: "hand_tool"
+  target_pose: {"x": -0.003, "y": 0.3, "z": 0.005, "qx": 0, "qy": 0, "qz": 0, "qw": 1}
+  duration_sec: 7
+  urdf_trajectory: "traj_step04.yaml"
+  ros2_action: "FollowJointTrajectory"
+  sim_stub: true

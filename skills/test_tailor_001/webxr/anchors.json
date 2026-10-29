@@ -1,0 +1,52 @@
+[
+ {
+  "step_id": 1,
+  "xr_anchor": "obj_00",
+  "position_m": [
+   -0.003,
+   0.3,
+   0.005
+  ],
+  "voice_prompt": "Make sure battery don disconnect before you touch anything"
+ },
+ {
+  "step_id": 2,
+  "xr_anchor": "obj_00",
+  "position_m": [
+   -0.003,
+   0.3,
+   0.005
+  ],
+  "voice_prompt": "No use 13, e go spoil am"
+ },
+ {
+  "step_id": 3,
+  "xr_anchor": "obj_02",
+  "position_m": [
+   -0.135,
+   0.3,
+   -0.116
+  ],
+  "voice_prompt": "Loosen alternator bolt with 14 spanner, turn am counter-cloc"
+ },
+ {
+  "step_id": 4,
+  "xr_anchor": "obj_00",
+  "position_m": [
+   -0.003,
+   0.3,
+   0.005
+  ],
+  "voice_prompt": "Careful, engine still hot, make you no burn hand"
+ },
+ {
+  "step_id": 5,
+  "xr_anchor": "obj_00",
+  "position_m": [
+   -0.003,
+   0.3,
+   0.005
+  ],
+  "voice_prompt": "Tighten everything back, then test run am small"
+ }
+]

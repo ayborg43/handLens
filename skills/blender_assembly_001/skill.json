@@ -1,0 +1,247 @@
+{
+ "project_id": "blender_assembly_001",
+ "skill_title": "Assembling a Golden Crown blender",
+ "capture_device": "Phone video",
+ "language_pack": [],
+ "world_scale": "meters, table at y=0, subject ~0.5m wide",
+ "notes": "Steps written by Muse Spark 1.3 from keyframes, SAM 3.1 detections and the Muse Voice transcript. position_m comes from SAM box centres and is a placeholder until the 3D model is captured and calibrated.",
+ "objects": {
+  "obj_00": "hand",
+  "obj_10": "lid",
+  "obj_20": "blender jar",
+  "obj_30": "blender base",
+  "obj_40": "power cord"
+ },
+ "steps": [
+  {
+   "step_id": 1,
+   "timestamp": "00:00-00:15",
+   "action": "Inspect blender base setup",
+   "tool": "hand",
+   "tool_object_id": "tool_01",
+   "target_object_id": "obj_30",
+   "human": {
+    "instruction": "Red blender base sits on counter with power cord unplugged and black lid beside it.",
+    "warning": "",
+    "video_clip": "clips/clip_0000.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_30",
+    "position_m": [
+     0.0,
+     0.25,
+     0.0
+    ],
+    "model_ref": "model.glb#obj_30"
+   },
+   "robot": {
+    "action_type": "inspect",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": 0.0,
+     "y": 0.25,
+     "z": 0.0,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 15,
+    "urdf_trajectory": "traj_step01.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_30",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Red blender base sits on counter with power cord unplugged a",
+    "hand_ghost": "ghost_hand_step01.glb"
+   }
+  },
+  {
+   "step_id": 2,
+   "timestamp": "00:15-00:30",
+   "action": "Inspect empty blender jar",
+   "tool": "hand",
+   "tool_object_id": "tool_02",
+   "target_object_id": "obj_20",
+   "human": {
+    "instruction": "Clear empty blender jar sits on counter next to stove and base.",
+    "warning": "",
+    "video_clip": "clips/clip_0015.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_20",
+    "position_m": [
+     0.193,
+     0.3,
+     -0.001
+    ],
+    "model_ref": "model.glb#obj_20"
+   },
+   "robot": {
+    "action_type": "inspect",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": 0.193,
+     "y": 0.3,
+     "z": -0.001,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 15,
+    "urdf_trajectory": "traj_step02.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_20",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Clear empty blender jar sits on counter next to stove and ba",
+    "hand_ghost": "ghost_hand_step02.glb"
+   }
+  },
+  {
+   "step_id": 3,
+   "timestamp": "00:30-00:44",
+   "action": "Pick up black lid",
+   "tool": "hand",
+   "tool_object_id": "tool_03",
+   "target_object_id": "obj_10",
+   "human": {
+    "instruction": "Hand picks up black lid and holds it over the blender base.",
+    "warning": "",
+    "video_clip": "clips/clip_0030.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_10",
+    "position_m": [
+     -0.144,
+     0.3,
+     -0.14
+    ],
+    "model_ref": "model.glb#obj_10"
+   },
+   "robot": {
+    "action_type": "pick",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": -0.144,
+     "y": 0.3,
+     "z": -0.14,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 14,
+    "urdf_trajectory": "traj_step03.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_10",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Hand picks up black lid and holds it over the blender base.",
+    "hand_ghost": "ghost_hand_step03.glb"
+   }
+  },
+  {
+   "step_id": 4,
+   "timestamp": "00:44-00:59",
+   "action": "Place lid on jar",
+   "tool": "hand",
+   "tool_object_id": "tool_04",
+   "target_object_id": "obj_10",
+   "human": {
+    "instruction": "Hand holds up clear jar then sets black lid onto the jar.",
+    "warning": "",
+    "video_clip": "clips/clip_0044.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_10",
+    "position_m": [
+     0.048,
+     0.3,
+     0.004
+    ],
+    "model_ref": "model.glb#obj_10"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": 0.048,
+     "y": 0.3,
+     "z": 0.004,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 15,
+    "urdf_trajectory": "traj_step04.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_10",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Hand holds up clear jar then sets black lid onto the jar.",
+    "hand_ghost": "ghost_hand_step04.glb"
+   }
+  },
+  {
+   "step_id": 5,
+   "timestamp": "00:59-01:14",
+   "action": "Place jar on base",
+   "tool": "hand",
+   "tool_object_id": "tool_05",
+   "target_object_id": "obj_20",
+   "human": {
+    "instruction": "Hand lowers lidded jar onto red base leaving blender fully assembled.",
+    "warning": "",
+    "video_clip": "clips/clip_0059.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_20",
+    "position_m": [
+     0.008,
+     0.3,
+     -0.099
+    ],
+    "model_ref": "model.glb#obj_20"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": 0.008,
+     "y": 0.3,
+     "z": -0.099,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 15,
+    "urdf_trajectory": "traj_step05.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_20",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Hand lowers lidded jar onto red base leaving blender fully a",
+    "hand_ghost": "ghost_hand_step05.glb"
+   }
+  }
+ ]
+}

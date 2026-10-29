@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<robot name="workshop">
+  <link name="base">
+    <inertial>
+      <mass value="1.0" />
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
+    </inertial>
+  </link>
+  <link name="obj_00">
+    <visual>
+      <geometry>
+        <mesh filename="model.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+  <joint name="obj_00_joint" type="fixed">
+    <parent link="base" />
+    <child link="obj_00" />
+  </joint>
+  <link name="obj_10">
+    <visual>
+      <geometry>
+        <mesh filename="model.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+  <joint name="obj_10_joint" type="fixed">
+    <parent link="base" />
+    <child link="obj_10" />
+  </joint>
+  <link name="obj_11">
+    <visual>
+      <geometry>
+        <mesh filename="model.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+  <joint name="obj_11_joint" type="fixed">
+    <parent link="base" />
+    <child link="obj_11" />
+  </joint>
+  <link name="obj_12">
+    <visual>
+      <geometry>
+        <mesh filename="model.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+  <joint name="obj_12_joint" type="fixed">
+    <parent link="base" />
+    <child link="obj_12" />
+  </joint>
+  <link name="obj_20">
+    <visual>
+      <geometry>
+        <mesh filename="model.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+  <joint name="obj_20_joint" type="fixed">
+    <parent link="base" />
+    <child link="obj_20" />
+  </joint>
+  <link name="obj_30">
+    <visual>
+      <geometry>
+        <mesh filename="model.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+  <joint name="obj_30_joint" type="fixed">
+    <parent link="base" />
+    <child link="obj_30" />
+  </joint>
+  <link name="obj_31">
+    <visual>
+      <geometry>
+        <mesh filename="model.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+  <joint name="obj_31_joint" type="fixed">
+    <parent link="base" />
+    <child link="obj_31" />
+  </joint>
+  <link name="obj_40">
+    <visual>
+      <geometry>
+        <mesh filename="model.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+  <joint name="obj_40_joint" type="fixed">
+    <parent link="base" />
+    <child link="obj_40" />
+  </joint>
+  <link name="obj_41">
+    <visual>
+      <geometry>
+        <mesh filename="model.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+  <joint name="obj_41_joint" type="fixed">
+    <parent link="base" />
+    <child link="obj_41" />
+  </joint>
+  <link name="obj_42">
+    <visual>
+      <geometry>
+        <mesh filename="model.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+  <joint name="obj_42_joint" type="fixed">
+    <parent link="base" />
+    <child link="obj_42" />
+  </joint>
+</robot>
