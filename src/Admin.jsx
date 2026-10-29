@@ -36,6 +36,7 @@ export function Admin() {
       form.append('orbit_duration', orbitDuration);
       if (files.video_mp4) form.append('video_mp4', files.video_mp4);
       if (files.audio_m4a) form.append('audio_m4a', files.audio_m4a);
+      if (files.marks_json) form.append('marks_json', files.marks_json);
       const res = await fetch(`${API}/skills`, { method: 'POST', body: form });
       setStatus(await res.json());
     } catch (e) {
@@ -125,6 +126,11 @@ export function Admin() {
               <span>Separate audio (optional)</span>
               <input type="file" accept="audio/*" onChange={pick('audio_m4a')} />
               <small>Overrides the video’s own sound.</small>
+            </label>
+            <label className="field">
+              <span>Step marks (optional)</span>
+              <input type="file" accept="application/json" onChange={pick('marks_json')} />
+              <small>From the <a href="#/mark">mark page</a> on your phone — tap Mark at each step while filming. Steps snap to your marks. Include a known-size tool in frame for scale.</small>
             </label>
             <div className="actions">
               <button type="submit" className="btn btn-primary" disabled={running || idMissing}>

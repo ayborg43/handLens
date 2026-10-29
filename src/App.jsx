@@ -466,6 +466,7 @@ export default function App({ initialSkill, initialStep }) {
                       </div>
                       <div className="stage-controls">
                         {!modelReady && <span className="badge">Placeholder shape</span>}
+                        <span className="badge" title="Part positions come from single-phone depth, so absolute size is estimated until you calibrate against a known-size object.">Scale: estimated</span>
                         <span className="stage-hint">Drag to rotate · scroll to zoom</span>
                       </div>
                     </div>

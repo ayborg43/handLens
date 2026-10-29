@@ -174,7 +174,45 @@ def spark_json(content, schema, name):
             raise SystemExit(f'Muse Spark returned non-JSON text: {e}')
 
 
-def live_board(skill_id, transcript, masks, n_frames=12, n_steps=5):
+def load_marks(sdir):
+    """Filmer's MARK taps from the #/mark page. Returns sorted seconds or None."""
+    path = os.path.join(sdir, 'marks.json')
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path) as f:
+            raw = json.load(f)
+        marks = sorted(float(x) for x in raw.get('marks', []))
+    except (ValueError, TypeError, AttributeError):
+        return None
+    if not 2 <= len(marks) <= 10:
+        return None
+    return marks
+
+
+def group_by_marks(transcript, marks):
+    """Merge transcript segments into one pseudo-segment per mark cluster."""
+    groups = [[] for _ in marks]
+    for seg in transcript:
+        mid = (seg['start'] + seg['end']) / 2
+        best = min(range(len(marks)), key=lambda i: abs(marks[i] - mid))
+        groups[best].append(seg)
+    groups = [g for g in groups if g]
+    if len(groups) < 2:
+        return None
+    out = []
+    for g in groups:
+        out.append({
+            'start': min(s['start'] for s in g),
+            'end': max(s['end'] for s in g),
+            'text': ' / '.join(s['text'] for s in g),
+            'lang': g[0].get('lang', 'und'),
+            'is_warning': any(s.get('is_warning') for s in g),
+        })
+    return out
+
+
+def live_board(skill_id, transcript, masks, n_frames=12, n_steps=5, marks=None):
     """Ask Muse Spark to write the steps from keyframes + SAM detections + transcript.
 
     Returns (board, raw) where `board` has the storyboard shape from_storyboard.build() takes.
@@ -205,6 +243,10 @@ def live_board(skill_id, transcript, masks, n_frames=12, n_steps=5):
         content.append({'type': 'input_image', 'image_url': f'data:image/jpeg;base64,{b64}'})
     spoken = '\n'.join(f"{t['start']:.1f}-{t['end']:.1f}s: {t['text']}" for t in transcript) or '(no recognisable speech)'
     content.append({'type': 'input_text', 'text': f'Speech transcript (Muse Voice):\n{spoken}'})
+    if marks:
+        content.append({'type': 'input_text', 'text':
+            'The filmer tapped MARK at these seconds: ' + ', '.join(f'{m:.1f}s' for m in marks) +
+            '. Align step boundaries near those taps.'})
     dets = []
     for fr in masks:
         dets.append(f"{fr['timestamp']:.1f}s: " + ', '.join(f"{o['label']} {o['bbox']}" for o in fr['objects']))
@@ -291,9 +333,18 @@ def main():
         transcript = json.load(f)
     with open(os.path.join(sdir, 'masks.json')) as f:
         masks = json.load(f)
+    marks = load_marks(sdir)
+    if marks and (not args.live_llm or not config.MODEL_API_KEY):
+        grouped = group_by_marks(transcript, marks)
+        if grouped is not None and 5 <= len(grouped) <= 10:
+            transcript = grouped
+            print(f'reason: snapped {len(grouped)} steps to filmer marks')
+        elif grouped is not None:
+            print(f'reason: ignoring marks ({len(grouped)} groups, need 5-10 steps)')
+        marks = marks if args.live_llm else None
     if args.live_llm and config.MODEL_API_KEY:
         import from_storyboard
-        spark_steps, raw, label_ids, duration = live_board(args.skill, transcript, masks)
+        spark_steps, raw, label_ids, duration = live_board(args.skill, transcript, masks, marks=marks)
         with open(os.path.join(sdir, 'reasoning.raw.json'), 'w') as f:
             json.dump(raw, f, indent=1)
         board = {

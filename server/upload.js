@@ -58,7 +58,8 @@ const fields = upload.fields([
   { name: 'video_mp4', maxCount: 1 },
   { name: 'skill_mp4', maxCount: 1 },
   { name: 'orbit_mp4', maxCount: 1 },
-  { name: 'audio_m4a', maxCount: 1 }
+  { name: 'audio_m4a', maxCount: 1 },
+  { name: 'marks_json', maxCount: 1 }
 ]);
 
 app.post('/api/skills', fields, async (req, res) => {
@@ -82,6 +83,7 @@ app.post('/api/skills', fields, async (req, res) => {
   move('skill_mp4', 'skill.mp4');
   move('orbit_mp4', 'orbit.mp4');
   move('audio_m4a', 'audio.m4a');
+  move('marks_json', 'marks.json');
 
   const derived = [];
   const hasSkill = fs.existsSync(path.join(sdir, 'skill.mp4'));
