@@ -1,0 +1,58 @@
+{
+ "button": {
+  "name": "button",
+  "blurb": "Spotted in 1 frames (not tied to a step yet).",
+  "frames": 1,
+  "avg_score": 0.9,
+  "steps": [],
+  "source": "template"
+ },
+ "hand": {
+  "name": "hand",
+  "blurb": "Spotted in 4 frames (not tied to a step yet).",
+  "frames": 4,
+  "avg_score": 0.91,
+  "steps": [],
+  "source": "template"
+ },
+ "hanger wire": {
+  "name": "hanger wire",
+  "blurb": "Spotted in 4 frames (used in step [4]).",
+  "frames": 4,
+  "avg_score": 0.82,
+  "steps": [
+   4
+  ],
+  "source": "template"
+ },
+ "lamp": {
+  "name": "lamp",
+  "blurb": "Spotted in 7 frames (used in steps [1, 2]).",
+  "frames": 7,
+  "avg_score": 0.89,
+  "steps": [
+   1,
+   2
+  ],
+  "source": "template"
+ },
+ "solar panel": {
+  "name": "solar panel",
+  "blurb": "Spotted in 2 frames (used in steps [3, 5]).",
+  "frames": 2,
+  "avg_score": 0.9,
+  "steps": [
+   3,
+   5
+  ],
+  "source": "template"
+ },
+ "usb port": {
+  "name": "usb port",
+  "blurb": "Spotted in 1 frames (not tied to a step yet).",
+  "frames": 1,
+  "avg_score": 0.85,
+  "steps": [],
+  "source": "template"
+ }
+}

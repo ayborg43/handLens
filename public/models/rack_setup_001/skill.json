@@ -1,0 +1,246 @@
+{
+ "project_id": "rack_setup_001",
+ "skill_title": "Clothes drying rack set-up",
+ "capture_device": "unknown",
+ "language_pack": [],
+ "world_scale": "meters, table at y=0, subject ~0.5m wide",
+ "notes": "Steps written by hand from the footage (215 s phone video of a pink-and-white folding clothes drying rack outdoors: folded walkaround, joint and wing close-ups, unfolding, rail spreading, final open check). The audio track is quiet handling sound and was not transcribed, so there is no transcript; timestamps come from observed actions. Positions come from hand-observed box centres and are placeholders until a 3D model is captured and calibrated.",
+ "objects": {
+  "obj_01": "drying rack",
+  "obj_02": "wing",
+  "obj_03": "joint",
+  "obj_04": "rail"
+ },
+ "steps": [
+  {
+   "step_id": 1,
+   "timestamp": "00:00-00:45",
+   "action": "Look over the folded rack",
+   "tool": "hand",
+   "tool_object_id": "tool_01",
+   "target_object_id": "obj_01",
+   "human": {
+    "instruction": "Look over the folded rack standing on its feet.",
+    "warning": "",
+    "video_clip": "clips/clip_0008.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_01",
+    "position_m": [
+     0.0,
+     0.3,
+     0.027
+    ],
+    "model_ref": "model.glb#obj_01"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": 0.0,
+     "y": 0.3,
+     "z": 0.027,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 45,
+    "urdf_trajectory": "traj_step01.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_01",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Look over the folded rack standing on its feet.",
+    "hand_ghost": "ghost_hand_step01.glb"
+   }
+  },
+  {
+   "step_id": 2,
+   "timestamp": "00:45-01:45",
+   "action": "Inspect the wings and joints",
+   "tool": "hand",
+   "tool_object_id": "tool_02",
+   "target_object_id": "obj_03",
+   "human": {
+    "instruction": "Check the wings with hanger holes, the pink joints and the feet.",
+    "warning": "",
+    "video_clip": "clips/clip_0092.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_03",
+    "position_m": [
+     -0.167,
+     0.3,
+     -0.102
+    ],
+    "model_ref": "model.glb#obj_03"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": -0.167,
+     "y": 0.3,
+     "z": -0.102,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 60,
+    "urdf_trajectory": "traj_step02.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_03",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Check the wings with hanger holes, the pink joints and the f",
+    "hand_ghost": "ghost_hand_step02.glb"
+   }
+  },
+  {
+   "step_id": 3,
+   "timestamp": "01:45-02:15",
+   "action": "Unfold the wings",
+   "tool": "hand",
+   "tool_object_id": "tool_03",
+   "target_object_id": "obj_02",
+   "human": {
+    "instruction": "Pull the folded wings apart until they swing open.",
+    "warning": "",
+    "video_clip": "clips/clip_0110.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_02",
+    "position_m": [
+     -0.028,
+     0.3,
+     -0.086
+    ],
+    "model_ref": "model.glb#obj_02"
+   },
+   "robot": {
+    "action_type": "press",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": -0.028,
+     "y": 0.3,
+     "z": -0.086,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 30,
+    "urdf_trajectory": "traj_step03.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_02",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Pull the folded wings apart until they swing open.",
+    "hand_ghost": "ghost_hand_step03.glb"
+   }
+  },
+  {
+   "step_id": 4,
+   "timestamp": "02:15-02:45",
+   "action": "Spread the rails level",
+   "tool": "hand",
+   "tool_object_id": "tool_04",
+   "target_object_id": "obj_04",
+   "human": {
+    "instruction": "Spread the rails out level on both sides.",
+    "warning": "",
+    "video_clip": "clips/clip_0148.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_04",
+    "position_m": [
+     0.056,
+     0.3,
+     0.023
+    ],
+    "model_ref": "model.glb#obj_04"
+   },
+   "robot": {
+    "action_type": "pull",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": 0.056,
+     "y": 0.3,
+     "z": 0.023,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 30,
+    "urdf_trajectory": "traj_step04.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_04",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Spread the rails out level on both sides.",
+    "hand_ghost": "ghost_hand_step04.glb"
+   }
+  },
+  {
+   "step_id": 5,
+   "timestamp": "02:45-03:34",
+   "action": "Check the open rack",
+   "tool": "hand",
+   "tool_object_id": "tool_05",
+   "target_object_id": "obj_01",
+   "human": {
+    "instruction": "Walk around the open rack and check the joints sit locked.",
+    "warning": "",
+    "video_clip": "clips/clip_0190.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_01",
+    "position_m": [
+     0.0,
+     0.3,
+     0.0
+    ],
+    "model_ref": "model.glb#obj_01"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": 0.0,
+     "y": 0.3,
+     "z": 0.0,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 49,
+    "urdf_trajectory": "traj_step05.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_01",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Walk around the open rack and check the joints sit locked.",
+    "hand_ghost": "ghost_hand_step05.glb"
+   }
+  }
+ ]
+}

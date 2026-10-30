@@ -1,16 +1,16 @@
 {
  "skills": [
   {
-   "id": "gen_ladipo_001",
-   "title": "Generator alternator bolt service"
-  },
-  {
    "id": "blender_assembly_001",
    "title": "Assembling a Golden Crown blender"
   },
   {
-   "id": "test_tailor_001",
-   "title": "Test tailor skill"
+   "id": "rack_setup_001",
+   "title": "Clothes drying rack set-up"
+  },
+  {
+   "id": "sunking_lamp_001",
+   "title": "Sun King solar lantern set-up"
   }
  ]
 }

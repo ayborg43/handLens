@@ -1,0 +1,52 @@
+[
+ {
+  "step_id": 1,
+  "xr_anchor": "obj_01",
+  "position_m": [
+   0.0,
+   0.3,
+   0.027
+  ],
+  "voice_prompt": "Look over the folded rack standing on its feet."
+ },
+ {
+  "step_id": 2,
+  "xr_anchor": "obj_03",
+  "position_m": [
+   -0.167,
+   0.3,
+   -0.102
+  ],
+  "voice_prompt": "Check the wings with hanger holes, the pink joints and the f"
+ },
+ {
+  "step_id": 3,
+  "xr_anchor": "obj_02",
+  "position_m": [
+   -0.028,
+   0.3,
+   -0.086
+  ],
+  "voice_prompt": "Pull the folded wings apart until they swing open."
+ },
+ {
+  "step_id": 4,
+  "xr_anchor": "obj_04",
+  "position_m": [
+   0.056,
+   0.3,
+   0.023
+  ],
+  "voice_prompt": "Spread the rails out level on both sides."
+ },
+ {
+  "step_id": 5,
+  "xr_anchor": "obj_01",
+  "position_m": [
+   0.0,
+   0.3,
+   0.0
+  ],
+  "voice_prompt": "Walk around the open rack and check the joints sit locked."
+ }
+]

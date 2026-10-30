@@ -1,0 +1,59 @@
+{
+ "drying rack": {
+  "name": "drying rack",
+  "blurb": "Spotted in 2 frames (used in steps [1, 5]).",
+  "frames": 2,
+  "avg_score": 0.9,
+  "steps": [
+   1,
+   5
+  ],
+  "source": "template"
+ },
+ "foot": {
+  "name": "foot",
+  "blurb": "Spotted in 1 frames (not tied to a step yet).",
+  "frames": 1,
+  "avg_score": 0.88,
+  "steps": [],
+  "source": "template"
+ },
+ "hand": {
+  "name": "hand",
+  "blurb": "Spotted in 2 frames (not tied to a step yet).",
+  "frames": 2,
+  "avg_score": 0.85,
+  "steps": [],
+  "source": "template"
+ },
+ "joint": {
+  "name": "joint",
+  "blurb": "Spotted in 4 frames (used in step [2]).",
+  "frames": 4,
+  "avg_score": 0.85,
+  "steps": [
+   2
+  ],
+  "source": "template"
+ },
+ "rail": {
+  "name": "rail",
+  "blurb": "Spotted in 2 frames (used in step [4]).",
+  "frames": 2,
+  "avg_score": 0.83,
+  "steps": [
+   4
+  ],
+  "source": "template"
+ },
+ "wing": {
+  "name": "wing",
+  "blurb": "Spotted in 2 frames (used in step [3]).",
+  "frames": 2,
+  "avg_score": 0.86,
+  "steps": [
+   3
+  ],
+  "source": "template"
+ }
+}

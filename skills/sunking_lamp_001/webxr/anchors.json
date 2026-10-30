@@ -1,0 +1,52 @@
+[
+ {
+  "step_id": 1,
+  "xr_anchor": "obj_01",
+  "position_m": [
+   -0.015,
+   0.3,
+   -0.085
+  ],
+  "voice_prompt": "Look over the lamp: the dome faces up and the button sits on"
+ },
+ {
+  "step_id": 2,
+  "xr_anchor": "obj_01",
+  "position_m": [
+   0.0,
+   0.3,
+   0.0
+  ],
+  "voice_prompt": "Pick up the lamp and turn it over in your hand."
+ },
+ {
+  "step_id": 3,
+  "xr_anchor": "obj_02",
+  "position_m": [
+   -0.145,
+   0.3,
+   0.051
+  ],
+  "voice_prompt": "Turn the back out so the solar panel faces the light."
+ },
+ {
+  "step_id": 4,
+  "xr_anchor": "obj_04",
+  "position_m": [
+   -0.111,
+   0.3,
+   0.035
+  ],
+  "voice_prompt": "Fit the wire stand onto the lamp body."
+ },
+ {
+  "step_id": 5,
+  "xr_anchor": "obj_02",
+  "position_m": [
+   -0.083,
+   0.3,
+   0.106
+  ],
+  "voice_prompt": "Stand the lamp on the wire stand with the panel facing out."
+ }
+]

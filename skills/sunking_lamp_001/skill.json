@@ -1,0 +1,245 @@
+{
+ "project_id": "sunking_lamp_001",
+ "skill_title": "Sun King solar lantern set-up",
+ "capture_device": "unknown",
+ "language_pack": [],
+ "world_scale": "meters, table at y=0, subject ~0.5m wide",
+ "notes": "Steps written by hand from the footage (102 s phone video of a yellow Sun King solar lantern: dome close-up, pick-up and turn-over, solar panel reveal, wire-stand fitting, standing demo). The audio track is very quiet and was not transcribed, so there is no transcript; timestamps come from observed actions. Positions come from hand-observed box centres and are placeholders until a 3D model is captured and calibrated.",
+ "objects": {
+  "obj_01": "lamp",
+  "obj_02": "solar panel",
+  "obj_04": "hanger wire"
+ },
+ "steps": [
+  {
+   "step_id": 1,
+   "timestamp": "00:00-00:20",
+   "action": "Look over the lamp at rest",
+   "tool": "hand",
+   "tool_object_id": "tool_01",
+   "target_object_id": "obj_01",
+   "human": {
+    "instruction": "Look over the lamp: the dome faces up and the button sits on the side.",
+    "warning": "",
+    "video_clip": "clips/clip_0000.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_01",
+    "position_m": [
+     -0.015,
+     0.3,
+     -0.085
+    ],
+    "model_ref": "model.glb#obj_01"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": -0.015,
+     "y": 0.3,
+     "z": -0.085,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 20,
+    "urdf_trajectory": "traj_step01.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_01",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Look over the lamp: the dome faces up and the button sits on",
+    "hand_ghost": "ghost_hand_step01.glb"
+   }
+  },
+  {
+   "step_id": 2,
+   "timestamp": "00:20-00:38",
+   "action": "Pick up the lamp and turn it over",
+   "tool": "hand",
+   "tool_object_id": "tool_02",
+   "target_object_id": "obj_01",
+   "human": {
+    "instruction": "Pick up the lamp and turn it over in your hand.",
+    "warning": "",
+    "video_clip": "clips/clip_0020.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_01",
+    "position_m": [
+     0.0,
+     0.3,
+     0.0
+    ],
+    "model_ref": "model.glb#obj_01"
+   },
+   "robot": {
+    "action_type": "pick",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": 0.0,
+     "y": 0.3,
+     "z": 0.0,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 18,
+    "urdf_trajectory": "traj_step02.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_01",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Pick up the lamp and turn it over in your hand.",
+    "hand_ghost": "ghost_hand_step02.glb"
+   }
+  },
+  {
+   "step_id": 3,
+   "timestamp": "00:38-00:56",
+   "action": "Show the solar panel",
+   "tool": "hand",
+   "tool_object_id": "tool_03",
+   "target_object_id": "obj_02",
+   "human": {
+    "instruction": "Turn the back out so the solar panel faces the light.",
+    "warning": "",
+    "video_clip": "clips/clip_0038.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_02",
+    "position_m": [
+     -0.145,
+     0.3,
+     0.051
+    ],
+    "model_ref": "model.glb#obj_02"
+   },
+   "robot": {
+    "action_type": "twist",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": -0.145,
+     "y": 0.3,
+     "z": 0.051,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 18,
+    "urdf_trajectory": "traj_step03.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_02",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Turn the back out so the solar panel faces the light.",
+    "hand_ghost": "ghost_hand_step03.glb"
+   }
+  },
+  {
+   "step_id": 4,
+   "timestamp": "00:56-01:18",
+   "action": "Fit the wire stand",
+   "tool": "hand",
+   "tool_object_id": "tool_04",
+   "target_object_id": "obj_04",
+   "human": {
+    "instruction": "Fit the wire stand onto the lamp body.",
+    "warning": "",
+    "video_clip": "clips/clip_0056.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_04",
+    "position_m": [
+     -0.111,
+     0.3,
+     0.035
+    ],
+    "model_ref": "model.glb#obj_04"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": -0.111,
+     "y": 0.3,
+     "z": 0.035,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 22,
+    "urdf_trajectory": "traj_step04.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_04",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Fit the wire stand onto the lamp body.",
+    "hand_ghost": "ghost_hand_step04.glb"
+   }
+  },
+  {
+   "step_id": 5,
+   "timestamp": "01:18-01:42",
+   "action": "Stand the lamp on its stand",
+   "tool": "hand",
+   "tool_object_id": "tool_05",
+   "target_object_id": "obj_02",
+   "human": {
+    "instruction": "Stand the lamp on the wire stand with the panel facing out.",
+    "warning": "",
+    "video_clip": "clips/clip_0078.mp4"
+   },
+   "spatial_3d": {
+    "anchor_id": "obj_02",
+    "position_m": [
+     -0.083,
+     0.3,
+     0.106
+    ],
+    "model_ref": "model.glb#obj_02"
+   },
+   "robot": {
+    "action_type": "place",
+    "tool_tcp": "hand",
+    "target_pose": {
+     "x": -0.083,
+     "y": 0.3,
+     "z": 0.106,
+     "qx": 0,
+     "qy": 0,
+     "qz": 0,
+     "qw": 1
+    },
+    "duration_sec": 24,
+    "urdf_trajectory": "traj_step05.yaml",
+    "ros2_action": "FollowJointTrajectory",
+    "sim_stub": true
+   },
+   "vr": {
+    "xr_anchor": "obj_02",
+    "overlay_type": "arrow+highlight",
+    "highlight_color": "#00FF00",
+    "voice_prompt": "Stand the lamp on the wire stand with the panel facing out.",
+    "hand_ghost": "ghost_hand_step05.glb"
+   }
+  }
+ ]
+}

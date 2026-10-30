@@ -1,0 +1,89 @@
+{
+ "capture_device": "unknown",
+ "language_pack": [],
+ "note": "Steps written by hand from the footage (215 s phone video of a pink-and-white folding clothes drying rack outdoors: folded walkaround, joint and wing close-ups, unfolding, rail spreading, final open check). The audio track is quiet handling sound and was not transcribed, so there is no transcript; timestamps come from observed actions. Positions come from hand-observed box centres and are placeholders until a 3D model is captured and calibrated.",
+ "objects": {
+  "obj_01": "drying rack",
+  "obj_02": "wing",
+  "obj_03": "joint",
+  "obj_04": "rail"
+ },
+ "steps": [
+  {
+   "action": "Look over the folded rack",
+   "action_type": "place",
+   "end": 45,
+   "instruction": "Look over the folded rack standing on its feet.",
+   "object": "obj_01",
+   "position_m": [
+    0.0,
+    0.3,
+    0.027
+   ],
+   "start": 0,
+   "tool": "hand",
+   "clip_start": 8
+  },
+  {
+   "action": "Inspect the wings and joints",
+   "action_type": "place",
+   "end": 105,
+   "instruction": "Check the wings with hanger holes, the pink joints and the feet.",
+   "object": "obj_03",
+   "position_m": [
+    -0.167,
+    0.3,
+    -0.102
+   ],
+   "start": 45,
+   "tool": "hand",
+   "clip_start": 92
+  },
+  {
+   "action": "Unfold the wings",
+   "action_type": "press",
+   "end": 135,
+   "instruction": "Pull the folded wings apart until they swing open.",
+   "object": "obj_02",
+   "position_m": [
+    -0.028,
+    0.3,
+    -0.086
+   ],
+   "start": 105,
+   "tool": "hand",
+   "clip_start": 110
+  },
+  {
+   "action": "Spread the rails level",
+   "action_type": "pull",
+   "end": 165,
+   "instruction": "Spread the rails out level on both sides.",
+   "object": "obj_04",
+   "position_m": [
+    0.056,
+    0.3,
+    0.023
+   ],
+   "start": 135,
+   "tool": "hand",
+   "clip_start": 148
+  },
+  {
+   "action": "Check the open rack",
+   "action_type": "place",
+   "end": 214,
+   "instruction": "Walk around the open rack and check the joints sit locked.",
+   "object": "obj_01",
+   "position_m": [
+    0.0,
+    0.3,
+    0.0
+   ],
+   "start": 165,
+   "tool": "hand",
+   "clip_start": 190
+  }
+ ],
+ "title": "Clothes drying rack set-up"
+}
