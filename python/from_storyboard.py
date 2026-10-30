@@ -34,7 +34,8 @@ def build(board, skill_id):
             'human': {
                 'instruction': st['instruction'],
                 'warning': st.get('warning', ''),
-                'video_clip': 'clips/clip_%04d.mp4' % int(st['start']),
+                # clips are named by where they were cut; a step may pick a moment inside its window
+                'video_clip': 'clips/clip_%04d.mp4' % int(st.get('clip_start', st['start'])),
             },
             'spatial_3d': {'anchor_id': target, 'position_m': pos, 'model_ref': 'model.glb#' + target},
             'robot': {

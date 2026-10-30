@@ -24,6 +24,25 @@ def check_skill(skill_id):
         skill = json.load(f)
     errors += validate(skill)
 
+    # What the browser loads must exist: every step's clip, and a served skill.json
+    # identical to the source one. (The dev server answers 200 with index.html for
+    # missing files, so a missing clip only shows up as a broken player.)
+    pub = os.path.join(ROOT, 'public', 'models', skill_id)
+    pub_skill_path = os.path.join(pub, 'skill.json')
+    if not os.path.exists(pub_skill_path):
+        errors.append('missing public/models/%s/skill.json (run the sync step)' % skill_id)
+    elif json.load(open(pub_skill_path)) != skill:
+        errors.append('public skill.json differs from skills/%s/skill.json' % skill_id)
+    for step in skill.get('steps', []):
+        clip = (step.get('human') or {}).get('video_clip')
+        clip_path = os.path.join(pub, clip) if clip else None
+        if not clip_path or not os.path.exists(clip_path):
+            errors.append(f'step {step.get("step_id")}: clip file missing: {clip}')
+            continue
+        with open(clip_path, 'rb') as f:
+            if b'ftyp' not in f.read(12):
+                errors.append(f'step {step.get("step_id")}: {clip} is not an MP4 file')
+
     for step in skill.get('steps', []):
         pos = step['spatial_3d']['position_m']
         traj_path = os.path.join(sdir, 'trajectories', 'traj_step%02d.yaml' % step['step_id'])

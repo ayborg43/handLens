@@ -56,16 +56,22 @@ async function tryJson(url) {
   }
 }
 
+async function tryViews(url) {
+  const list = await tryJson(url);
+  return Array.isArray(list) ? list : null;
+}
+
 // Evidence behind a skill: what the AI heard and saw, and how honest each output is.
 export async function loadEvidence(skillId) {
   const base = `/models/${skillId}`;
-  const [transcript, masks, status, glossary] = await Promise.all([
+  const [transcript, masks, status, glossary, views] = await Promise.all([
     tryJson(`${base}/ai/transcript.json`),
     tryJson(`${base}/ai/masks.json`),
     tryJson(`${base}/status.json`),
-    tryJson(`${base}/glossary.json`)
+    tryJson(`${base}/glossary.json`),
+    tryViews(`${base}/views.json`)
   ]);
-  return { transcript: transcript || [], masks: masks || [], status, glossary: glossary || null };
+  return { transcript: transcript || [], masks: masks || [], status, glossary: glossary || null, views };
 }
 
 // "MM:SS-MM:SS" -> [startSec, endSec]

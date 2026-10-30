@@ -4,11 +4,12 @@ import { boxesAt, clipOffset } from '../utils/overlay.js';
 // A clip with optional SAM detection boxes drawn over it. `frames` is the
 // skill's masks.json (live detections only); times are mapped from the clip back
 // to the source video so boxes follow the footage.
-export function ClipPlayer({ src, step, frames, showBoxes, loop, muted, autoPlay, onEnded, ariaLabel, children, glossary, skillSteps, onJumpStep }) {
+export function ClipPlayer({ src, step, frames, showBoxes, loop, muted, autoPlay, onEnded, ariaLabel, children, glossary, skillSteps, onJumpStep, sampleNote }) {
   const videoRef = useRef(null);
   const [rect, setRect] = useState(null);
   const [t, setT] = useState(0);
   const [picked, setPicked] = useState(null);
+  const [failed, setFailed] = useState(false);
   const targetId = Number(String(step.target_object_id || '').replace(/\D/g, ''));
   const offset = clipOffset(step);
   const overlay = Boolean(showBoxes && frames && frames.length > 0);
@@ -79,6 +80,7 @@ export function ClipPlayer({ src, step, frames, showBoxes, loop, muted, autoPlay
   };
 
   useEffect(() => { setPicked(null); }, [src, step]);
+  useEffect(() => { setFailed(false); }, [src]);
 
   const entry = picked && glossary ? glossary[picked.box.label] : null;
   const related = entry && skillSteps
@@ -97,10 +99,18 @@ export function ClipPlayer({ src, step, frames, showBoxes, loop, muted, autoPlay
         playsInline
         preload="metadata"
         onEnded={onEnded}
+        onError={() => setFailed(true)}
         aria-label={ariaLabel}
+        style={failed ? { display: 'none' } : undefined}
       >
         {children}
       </video>
+      {failed && (
+        <div className="clip-error" role="alert">
+          <strong>This clip couldn’t be loaded.</strong>
+          <span>The step instructions on the right still apply. Try another step or reload the page.</span>
+        </div>
+      )}
       {overlay && rect && (
         <div
           className="clip-overlay"
@@ -120,6 +130,11 @@ export function ClipPlayer({ src, step, frames, showBoxes, loop, muted, autoPlay
               <span>{b.label} {Math.round(b.score * 100)}%</span>
             </div>
           ))}
+        </div>
+      )}
+      {sampleNote && boxes.length > 0 && rect && (
+        <div className="clip-chip" style={{ left: rect.left + 8, top: rect.top + 8 }}>
+          Sample detections · names are illustrative
         </div>
       )}
       {picked && rect && (

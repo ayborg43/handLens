@@ -144,9 +144,9 @@ export function Landing() {
           <div className="hero-copy">
             <h2>Film a skill once. Teach it to people, robots and headsets.</h2>
             <p>
-              handLens turns one phone capture of any hands-on job into a 3D manual you can rotate,
-              a robot-ready script, and a VR overlay. Launch skill: generator repair, with the
-              speaker’s own Pidgin kept word for word.
+              handLens turns one phone video of any hands-on job into a step-by-step guide you can
+              follow, plus a robot-ready script and a VR overlay. Meta’s SAM 3.1, Muse Voice and Muse
+              Spark read the video; every skill shows which parts ran live and which are still stand-ins.
             </p>
             <div className="hero-actions">
               {first && (

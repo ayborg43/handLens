@@ -335,6 +335,7 @@ export default function App({ initialSkill, initialStep }) {
                       src={`${base}/${step.human.video_clip}`}
                       step={step}
                       frames={detFrames}
+                      sampleNote={!liveFrames}
                       showBoxes={boxes}
                       loop={!autoNext}
                       muted={!sound}
@@ -372,11 +373,6 @@ export default function App({ initialSkill, initialStep }) {
                   {boxes && liveFrames && (
                     <p className="media-caption">
                       Green outline: what this step is about. White outline: hands. Found by SAM 3.1 every 2 seconds, so the outlines follow the video loosely. Tap any outline to identify it.
-                    </p>
-                  )}
-                  {boxes && !liveFrames && detFrames.length > 0 && (
-                    <p className="media-caption">
-                      Outlines come from sample detections, so treat names as illustrative. Tap any outline to identify it.
                     </p>
                   )}
                   {madeBy(status) && <p className="media-caption">{madeBy(status)}</p>}
@@ -483,6 +479,24 @@ export default function App({ initialSkill, initialStep }) {
                     <button type="button" className="btn" onClick={() => setShowPlaceholder(true)}>
                       Preview the viewer with a placeholder shape
                     </button>
+                    {evidence && evidence.views && evidence.views.length > 0 && (
+                      <section className="views" aria-label="All sides of the subject, from the video">
+                        <h3 className="panel-title">All sides, from the video</h3>
+                        <p className="media-caption">
+                          Stills pulled from the capture at the times shown — not a 3D model,
+                          but every face of the object as filmed.
+                        </p>
+                        <ul className="views-grid">
+                          {evidence.views.map((v) => (
+                            <li key={v.file} className="views-item">
+                              <img src={`${base}/${v.file}`} alt={`${v.label}: ${v.note}`} loading="lazy" />
+                              <p><strong>{v.label}</strong> · {v.timestamp}</p>
+                              <p className="media-caption">{v.note}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
+                    )}
                   </div>
                 )}
               </div>

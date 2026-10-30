@@ -1028,6 +1028,13 @@ progress::-moz-progress-bar { background: var(--accent-strong); }
 .state.panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
 .skeleton-guide { height: 480px; }
 
+/* all-sides stills shown while a skill has no 3D model yet */
+.views { margin-top: var(--s-4); display: grid; gap: var(--s-2); }
+.views-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--s-3); }
+.views-item { display: grid; gap: 4px; }
+.views-item img { width: 100%; border-radius: var(--radius); background: #000; }
+.views-item p { margin: 0; font-size: var(--fs-xs); }
+
 @media (max-width: 860px) {
   .app { padding: var(--s-3) var(--s-3) var(--s-6); gap: var(--s-3); }
   .skill-title { font-size: 22px; }
@@ -1037,4 +1044,33 @@ progress::-moz-progress-bar { background: var(--accent-strong); }
   .guide-card h2 { font-size: 22px; }
   .outputs-extra { grid-template-columns: minmax(0, 1fr); padding: var(--s-4); }
   .hint { display: none; }
+}
+
+/* clip: load error + sample-detection chip */
+.clip-error {
+  display: grid;
+  gap: 4px;
+  place-content: center;
+  min-height: 220px;
+  padding: var(--s-5);
+  text-align: center;
+  line-height: 1.4;
+  color: var(--muted);
+  background: var(--panel-2);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+}
+.clip-error strong { color: var(--text); font-size: var(--fs-base); }
+.clip-chip {
+  position: absolute;
+  z-index: 3;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #8a5200;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(178, 106, 0, 0.45);
+  border-radius: 999px;
+  pointer-events: none;
 }

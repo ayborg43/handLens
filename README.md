@@ -3,8 +3,8 @@
 Capture any hands-on skill once on a Samsung S23 and compile it into three
 usable forms from one canonical `skill.json`: a human 3D manual (this app),
 a robot-executable stub (URDF + ROS2-style trajectories + MuJoCo scene),
-and a VR overlay stub (WebXR page). Ladipo generator repair
-(`gen_ladipo_001`) is the launch skill, not the limit.
+and a VR overlay stub (WebXR page). It works on any hands-on skill; the repository ships
+several real phone-video skills (see `public/models/index.json`).
 
 Spec: [PRD.md](PRD.md) · Roadmap: [soul.md](soul.md)
 

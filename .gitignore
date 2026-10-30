@@ -17,3 +17,6 @@ skills/*/audio.m4a
 .vercel/
 skills/*/audio.wav
 skills/*/transcript.raw.json
+
+# raw source recordings (large, and the people in them have not consented to publication)
+videos/
